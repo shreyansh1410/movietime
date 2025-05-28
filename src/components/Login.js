@@ -82,7 +82,6 @@ const Login = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      {/* Background Image Container */}
       <div className="fixed inset-0 -z-10">
         <img
           src={BACKGROUND_IMG_URL}
@@ -91,7 +90,6 @@ const Login = () => {
         />
       </div>
 
-      {/* Main Content Container */}
       <div className="flex-1 flex items-center justify-center px-4 py-16 sm:px-6 lg:px-8">
         <div className="w-full max-w-md">
           <form
@@ -100,7 +98,7 @@ const Login = () => {
           >
             <h1 className="text-4xl font-bold text-white text-center mb-8">
               {isSignedIn ? "Welcome Back" : "Create Account"}
-            </h1>
+            </h1> 
 
             <div className="space-y-4">
               {!isSignedIn && (
@@ -109,7 +107,7 @@ const Login = () => {
                     ref={name}
                     type="text"
                     placeholder="Full Name"
-                    className="w-full h-14 px-4 rounded-lg bg-gray-800 text-white border border-gray-700 focus:border-red-600 focus:ring-1 focus:ring-red-600 transition-colors"
+                    className="w-full h-14 px-4 rounded-lg bg-gray-800 text-white border border-gray-700 focus:border-blue-600 focus:ring-1 focus:ring-blue-600 transition-colors"
                   />
                 </div>
               )}
@@ -119,7 +117,7 @@ const Login = () => {
                   ref={email}
                   type="email"
                   placeholder="Email Address"
-                  className="w-full h-14 px-4 rounded-lg bg-gray-800 text-white border border-gray-700 focus:border-red-600 focus:ring-1 focus:ring-red-600 transition-colors"
+                  className="w-full h-14 px-4 rounded-lg bg-gray-800 text-white border border-gray-700 focus:border-blue-600 focus:ring-1 focus:ring-blue-600 transition-colors"
                 />
               </div>
 
@@ -128,19 +126,19 @@ const Login = () => {
                   ref={password}
                   type="password"
                   placeholder="Password"
-                  className="w-full h-14 px-4 rounded-lg bg-gray-800 text-white border border-gray-700 focus:border-red-600 focus:ring-1 focus:ring-red-600 transition-colors"
+                  className="w-full h-14 px-4 rounded-lg bg-gray-800 text-white border border-gray-700 focus:border-blue-600 focus:ring-1 focus:ring-blue-600 transition-colors"
                 />
               </div>
             </div>
 
             {errorMessage && (
-              <p className="text-red-600 text-sm text-center mt-2">
+              <p className="text-blue-600 text-sm text-center mt-2">
                 {errorMessage}
               </p>
             )}
 
             <button
-              className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-lg transition-colors duration-200 ease-in-out transform hover:scale-[1.02]"
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition-colors duration-200 ease-in-out transform hover:scale-[1.02]"
               onClick={handleAuth}
             >
               {isSignedIn ? "Sign In" : "Sign Up"}
@@ -149,7 +147,7 @@ const Login = () => {
             <div className="text-center">
               <button
                 type="button"
-                className="text-white hover:text-red-600 transition-colors text-sm font-medium"
+                className="text-white hover:text-blue-600 transition-colors text-sm font-medium"
                 onClick={handleSignIn}
               >
                 {isSignedIn

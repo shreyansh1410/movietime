@@ -4,7 +4,7 @@ import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { addUser, removeUser } from "../utils/userSlice";
-import { LOGO, SUPPORTED_LANGUAGES } from "../utils/constants";
+import { SUPPORTED_LANGUAGES } from "../utils/constants";
 import { toggleAiSearchView } from "../utils/aiSearchSlice";
 import { changeLanguage } from "../utils/configSlice";
 
@@ -40,9 +40,9 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           <img
-            src={LOGO}
+            src="movietime_logo.png"
             alt="logo"
-            className="w-24 md:w-36 transition-transform hover:scale-105 cursor-pointer"
+            className="text-blue-600 w-24 md:w-36 transition-transform hover:scale-105 cursor-pointer"
             onClick={() => navigate("/")}
           />
 
